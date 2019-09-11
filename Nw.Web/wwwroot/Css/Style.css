@@ -1,0 +1,56 @@
+﻿:root {
+    --main-bg-color: #86d9ef;
+}
+body {
+    margin: 0;
+}
+* {
+    font-family: sans-serif;
+}
+header {
+    background: var(--main-bg-color);
+    padding: 10px 150px 0;
+}
+header a {
+    text-decoration: none;
+}
+header a h1 {
+    margin: 0;
+    padding: 20px 0 10px 40px;
+    color: #ffffff;
+    font-size: 3em;
+}
+header nav {
+    background: var(--main-bg-color);
+}
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    padding: 7px 30px;
+    border-bottom: 3px solid transparent;
+    margin: 10px;
+    transition: border-bottom .5s;
+}
+header nav ul li a:hover {
+    border-bottom: 3px solid #ffffff;
+}
+main {
+    min-height: 74.2vh;
+}
+footer {
+    background: var(--main-bg-color);
+    padding: 20px 0;
+}
+footer p {
+    color: #ffffff;
+    text-align: center;
+}
