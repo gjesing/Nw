@@ -45,6 +45,7 @@ header nav ul li a:hover {
 }
 main {
     min-height: 74.2vh;
+    padding: 50px 190px;
 }
 footer {
     background: var(--main-bg-color);
