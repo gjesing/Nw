@@ -1,4 +1,5 @@
 ﻿@page
+@using Nw.Entities
 @model Nw.Web.Pages.HRModel
 @{
     ViewData["Title"] = "HR";
@@ -12,4 +13,55 @@
         <th>Fornavn</th>
         <th>Efternavn</th>
     </tr>
+    @{ 
+        foreach (Employees employee in Model.Employees)
+        {
+            <tr id="@employee.EmployeeId">
+                <td>@employee.TitleOfCourtesy</td>
+                <td>@employee.FirstName</td>
+                <td>@employee.LastName</td>
+            </tr>
+        }
+    }
 </table>
+<form>
+    <label for="FirstName">Fornavn</label>
+    <input type="text" name="FirstName" />
+    <label for="LastName">Efternavn</label>
+    <input type="text" name="LastName" />
+    <label for="Title">Stilling</label>
+    <input type="text" name="Title" />
+    <label for="TitleOfCourtesy">Titel</label>
+    <select name="TitleOfCourtesy">
+        <option>Vælg</option>
+    </select>
+    <label for="BirthDate">Fødselsdato</label>
+    <input type="date" name="BirthDate" />
+    <label for="HireDate">Ansættelsesdato</label>
+    <input type="date" name="HireDate" />
+    <label for="Address">Adresse</label>
+    <input type="text" name="Address" />
+    <label for="City">By</label>
+    <input type="text" name="City" />
+    <label for="Region">Region</label>
+    <input type="text" name="Region" />
+    <label for="PostalCode">Postnummer</label>
+    <input type="text" name="PostalCode" />
+    <label for="Country">Land</label>
+    <input type="text" name="Country" />
+    <label for="HomePhone">Hjemmetelefon</label>
+    <input type="tel" name="HomePhone" />
+    <label for="Extension">Forlængelse</label>
+    <input type="tel" name="Extension" />
+    <label for="Photo">Billede</label>
+    <input type="text" name="Photo" />
+    <label for="Notes">Noter</label>
+    <input type="text" name="Notes" />
+    <label for="ReportsTo">Rapporterer til</label>
+    <select name="FirstName">
+        <option>Vælg</option>
+    </select>
+    <label for="PhotoPath">Billedsti</label>
+    <input type="text" name="PhotoPath" />
+    <button type="submit" disabled>Opdatér</button>
+</form>
