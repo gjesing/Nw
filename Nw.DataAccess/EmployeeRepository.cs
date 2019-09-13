@@ -16,5 +16,9 @@ namespace Nw.DataAccess
         {
             return model.Employees.ToList();
         }
+        public Employees GetEmployeeById(int id)
+        {
+            return model.Employees.Where(e => e.EmployeeId == id).First<Employees>();
+        }
     }
 }

@@ -7,13 +7,13 @@
 }
 
 <h1>HR</h1>
-<table>
+<table id="employeeTable">
     <tr>
         <th>Titel</th>
         <th>Fornavn</th>
         <th>Efternavn</th>
     </tr>
-    @{ 
+    @{
         foreach (Employees employee in Model.Employees)
         {
             <tr id="@employee.EmployeeId">
@@ -24,7 +24,7 @@
         }
     }
 </table>
-<form>
+<form id="updateForm">
     <label for="FirstName">Fornavn</label>
     <input type="text" name="FirstName" />
     <label for="LastName">Efternavn</label>
@@ -33,7 +33,7 @@
     <input type="text" name="Title" />
     <label for="TitleOfCourtesy">Titel</label>
     <select name="TitleOfCourtesy">
-        <option>Vælg</option>
+        <option disabled selected>Vælg</option>
     </select>
     <label for="BirthDate">Fødselsdato</label>
     <input type="date" name="BirthDate" />
@@ -59,9 +59,20 @@
     <input type="text" name="Notes" />
     <label for="ReportsTo">Rapporterer til</label>
     <select name="FirstName">
-        <option>Vælg</option>
+        <option disabled selected>Vælg</option>
     </select>
     <label for="PhotoPath">Billedsti</label>
     <input type="text" name="PhotoPath" />
     <button type="submit" disabled>Opdatér</button>
 </form>
+<script>
+    document.querySelector('#employeeTable').addEventListener('click', function (e) {
+        let selectedTableRow = e.srcElement.parentElement
+        selectedTableRow.classList.add('selected')
+        document.querySelector('#updateForm button').removeAttribute('disabled')
+        let selectedEmployee = '@Model.GetSelectedEmployee(1).FirstName'
+        console.log(selectedEmployee)
+        const updateFormInputs = document.querySelectorAll('#updateForm input')
+        console.log(updateFormInputs[0].setAttribute('value', selectedEmployee))
+    })
+</script>

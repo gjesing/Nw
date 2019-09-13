@@ -17,5 +17,10 @@ namespace Nw.Web.Pages
             EmployeeRepository employeeRepository = new EmployeeRepository();
             Employees = employeeRepository.GetAllEmployees();
         }
+        public Employees GetSelectedEmployee(int id)
+        {
+            EmployeeRepository employeeRepository = new EmployeeRepository();
+            return employeeRepository.GetEmployeeById(id);
+        }
     }
 }
