@@ -5,5 +5,41 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h2>Orders</h2>
-
+<h1>Ordrer</h1>
+<table id="employeeTable">
+    <tr>
+        <th>Ordre ID</th>
+        <th>Kunde ID</th>
+        <th>Medarbejder ID</th>
+        <th>Bestillings&shy;dato</th>
+        <th>Påkrævet modtagelsesdato</th>
+        <th>Forsendelses&shy;dato</th>
+        <th>Send via</th>
+        <th>Fragt</th>
+        <th>Modtagers navn</th>
+        <th>Modtagers by</th>
+        <th>Modtagers region</th>
+        <th>Modtagers postnummer</th>
+        <th>Modtagers land</th>
+    </tr>
+    @{
+        foreach (var orders in Model.Orders)
+        {
+    <tr>
+        <td>@orders.OrderId</td>
+        <td>@orders.CustomerId</td>
+        <td>@orders.EmployeeId</td>
+        <td>@orders.OrderDate</td>
+        <td>@orders.RequiredDate</td>
+        <td>@orders.ShippedDate</td>
+        <td>@orders.ShipVia</td>
+        <td>@orders.Freight</td>
+        <td>@orders.ShipName</td>
+        <td>@orders.ShipCity</td>
+        <td>@orders.ShipRegion</td>
+        <td>@orders.ShipPostalCode</td>
+        <td>@orders.ShipCountry</td>
+    </tr>
+        }
+    }
+</table>

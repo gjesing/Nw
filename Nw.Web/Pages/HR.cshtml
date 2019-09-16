@@ -1,5 +1,4 @@
 ﻿@page
-@using Nw.Entities
 @model Nw.Web.Pages.HRModel
 @{
     ViewData["Title"] = "HR";
@@ -14,7 +13,7 @@
         <th>Efternavn</th>
     </tr>
     @{
-        foreach (Employees employee in Model.Employees)
+        foreach (var employee in Model.Employees)
         {
             <tr id="@employee.EmployeeId">
                 <td>@employee.TitleOfCourtesy</td>

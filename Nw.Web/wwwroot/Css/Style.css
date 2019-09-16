@@ -53,7 +53,6 @@ main h1 ~ p {
 main table {
     border-collapse: collapse;
     margin: 0;
-    overflow: scroll;
 }
 main table tr:not(:first-child):hover, main table tr.selected {
     background: #9dd2e0;
