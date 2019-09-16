@@ -17,5 +17,9 @@ namespace Nw.DataAccess
         {
             return model.Orders.ToList();
         }
+        public List<Orders> GetUnsentOrdersWithLatestRequiredDate()
+        {
+            return model.Orders.Where(o => o.ShippedDate == null).ToList();
+        }
     }
 }

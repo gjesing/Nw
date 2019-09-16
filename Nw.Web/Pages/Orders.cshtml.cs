@@ -15,7 +15,7 @@ namespace Nw.Web.Pages
         public void OnGet()
         {
             OrderRepository orderRepository = new OrderRepository();
-            Orders = orderRepository.GetAllOrders();
+            Orders = orderRepository.GetUnsentOrdersWithLatestRequiredDate();
         }
     }
 }
