@@ -67,12 +67,6 @@
 </form>
 <script>
     document.querySelector('#employeeTable').addEventListener('click', function (e) {
-        let selectedTableRow = e.srcElement.parentElement
-        selectedTableRow.classList.add('selected')
-        document.querySelector('#updateForm button').removeAttribute('disabled')
-        let selectedEmployee = '@Model.GetSelectedEmployee(1).FirstName'
-        console.log(selectedEmployee)
-        const updateFormInputs = document.querySelectorAll('#updateForm input')
-        console.log(updateFormInputs[0].setAttribute('value', selectedEmployee))
+        e.srcElement.parentElement.classList.add('selected')
     })
 </script>
