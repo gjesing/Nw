@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Nw.DataAccess
 {
-    class OrderRepository
+    public class OrderRepository
     {
         private NorthwindModel model;
         public OrderRepository()

@@ -97,15 +97,3 @@ main form button:not([disabled]):hover {
     cursor: pointer;
     transition: background .5s, border .5s;
 }
-footer {
-    background: #9dd2e0;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-footer p {
-    color: #ffffff;
-    text-align: center;
-    font-size: 15px;
-}
