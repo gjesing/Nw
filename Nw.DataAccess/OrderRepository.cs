@@ -17,9 +17,9 @@ namespace Nw.DataAccess
         {
             return model.Orders.ToList();
         }
-        public List<Orders> GetOrderById(int id)
+        public Orders GetOrderById(int id)
         {
-            return model.Orders.Where(o => o.OrderId == id).ToList();
+            return model.Orders.Where(o => o.OrderId == id).First();
         }
         public List<Orders> GetUnsentOrdersWithLatestRequiredDate()
         {
