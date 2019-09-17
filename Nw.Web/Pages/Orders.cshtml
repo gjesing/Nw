@@ -6,7 +6,7 @@
 }
 
 <h1>Ordrer</h1>
-<table id="employeeTable">
+<table id="orderTable">
     <tr>
         <th>Ordre ID</th>
         <th>Kunde ID</th>
@@ -22,21 +22,21 @@
         <th>Modtagers land</th>
     </tr>
     @{
-        foreach (var orders in Model.Orders)
+        foreach (var order in Model.Orders)
         {
     <tr>
-        <td>@orders.OrderId</td>
-        <td>@orders.CustomerId</td>
-        <td>@orders.EmployeeId</td>
-        <td>@orders.OrderDate</td>
-        <td>@orders.RequiredDate</td>
-        <td>@orders.ShipVia</td>
-        <td>@orders.Freight</td>
-        <td>@orders.ShipName</td>
-        <td>@orders.ShipCity</td>
-        <td>@orders.ShipRegion</td>
-        <td>@orders.ShipPostalCode</td>
-        <td>@orders.ShipCountry</td>
+        <td>@order.OrderId</td>
+        <td>@order.CustomerId</td>
+        <td>@order.EmployeeId</td>
+        <td>@order.OrderDate</td>
+        <td>@order.RequiredDate</td>
+        <td>@order.ShipVia</td>
+        <td>@order.Freight</td>
+        <td>@order.ShipName</td>
+        <td>@order.ShipCity</td>
+        <td>@order.ShipRegion</td>
+        <td>@order.ShipPostalCode</td>
+        <td>@order.ShipCountry</td>
     </tr>
         }
     }

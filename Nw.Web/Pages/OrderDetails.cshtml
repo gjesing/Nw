@@ -5,5 +5,54 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Ordre</h1>
-
+<h1>Ordre @Model.Order.OrderId</h1>
+<table class="orderDetailsTable">
+    <tr>
+        <th>Ordre ID</th>
+        <td>@Model.Order.OrderId</td>
+    </tr>
+    <tr>
+        <th>Kunde ID</th>
+        <td>@Model.Order.CustomerId</td>
+    </tr>
+    <tr>
+        <th>Medarbejder ID</th>
+        <td>@Model.Order.EmployeeId</td>
+    </tr>
+    <tr>
+        <th>Bestillings&shy;dato</th>
+        <td>@Model.Order.OrderDate</td>
+    </tr>
+    <tr>
+        <th>Påkrævet modtagelsesdato</th>
+        <td>@Model.Order.RequiredDate</td>
+    </tr>
+    <tr>
+        <th>Send via</th>
+        <td>@Model.Order.ShipVia</td>
+    </tr>
+    <tr>
+        <th>Fragt</th>
+        <td>@Model.Order.Freight</td>
+    </tr>
+    <tr>
+        <th>Modtagers navn</th>
+        <td>@Model.Order.ShipName</td>
+    </tr>
+    <tr>
+        <th>Modtagers by</th>
+        <td>@Model.Order.ShipCity</td>
+    </tr>
+    <tr>
+        <th>Modtagers region</th>
+        <td>@Model.Order.ShipRegion</td>
+    </tr>
+    <tr>
+        <th>Modtagers postnummer</th>
+        <td>@Model.Order.ShipPostalCode</td>
+    </tr>
+    <tr>
+        <th>Modtagers land</th>
+        <td>@Model.Order.ShipCountry</td>
+    </tr>
+</table>

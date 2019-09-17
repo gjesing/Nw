@@ -54,9 +54,12 @@ main table {
     border-collapse: collapse;
     margin: 0;
 }
-main table tr:not(:first-child):hover, main table tr.selected {
+#employeeTable tr:not(:first-child):hover, main table tr.selected, #orderTable tr:not(:first-child):hover, main table tr.selected {
     background: #9dd2e0;
     cursor: pointer;
+}
+main .orderDetailsTable tr th {
+    text-align: left;
 }
 main table tr th, main table tr td {
     border-top: 1px solid #cccccc;
