@@ -6,7 +6,7 @@
 }
 
 <h1>Ordre @Model.Order.OrderId</h1>
-<table class="orderDetailsTable">
+<table id="orderInfoTable">
     <tr>
         <th>Ordre ID</th>
         <td>@Model.Order.OrderId</td>
@@ -55,4 +55,28 @@
         <th>Modtagers land</th>
         <td>@Model.Order.ShipCountry</td>
     </tr>
+</table>
+<table id="orderDetailsTable">
+    <tr>
+        <th colspan="100%">Ordredetaljer</th>
+    </tr>
+    <tr>
+        <th>Ordre ID</th>
+        <th>Produkt ID</th>
+        <th>Stykpris</th>
+        <th>Antal</th>
+        <th>Rabat</th>
+    </tr>
+    @{
+        foreach (var orderDetail in Model.OrderDetails)
+        {
+            <tr>
+                <td>@orderDetail.OrderId</td>
+                <td>@orderDetail.ProductId</td>
+                <td>@orderDetail.UnitPrice</td>
+                <td>@orderDetail.Quantity</td>
+                <td>@orderDetail.Discount</td>
+            </tr>
+        }
+    }
 </table>

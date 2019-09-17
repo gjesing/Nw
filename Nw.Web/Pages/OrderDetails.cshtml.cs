@@ -17,6 +17,8 @@ namespace Nw.Web.Pages
         {
             OrderRepository orderRepository = new OrderRepository();
             Order = orderRepository.GetOrderById(id);
+            OrderDetailRepository orderDetailRepository = new OrderDetailRepository();
+            OrderDetails = orderDetailRepository.GetOrderDetailsByOrderId(id);
             return Page();
         }
     }

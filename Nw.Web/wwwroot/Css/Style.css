@@ -58,8 +58,17 @@ main table {
     background: #9dd2e0;
     cursor: pointer;
 }
-main .orderDetailsTable tr th {
+#orderInfoTable tr th {
     text-align: left;
+}
+#orderDetailsTable {
+    text-align: center;
+}
+#orderDetailsTable tr:first-child th {
+    border-top: none;
+    font-size: 1.5em;
+    text-align: left;
+    padding-bottom: 30px;
 }
 main table tr th, main table tr td {
     border-top: 1px solid #cccccc;

@@ -9,6 +9,10 @@ namespace Nw.DataAccess
     public class OrderDetailRepository
     {
         private NorthwindModel model;
+        public OrderDetailRepository()
+        {
+            model = new NorthwindModel();
+        }
         public List<OrderDetails> GetOrderDetailsByOrderId(int id)
         {
             return model.OrderDetails.Where(o => o.OrderId == id).ToList();
