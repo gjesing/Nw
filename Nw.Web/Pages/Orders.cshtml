@@ -24,7 +24,7 @@
     @{
         foreach (var order in Model.Orders)
         {
-    <tr>
+    <tr onclick="window.location='OrderDetails/@order.OrderId'">
         <td>@order.OrderId</td>
         <td>@order.CustomerId</td>
         <td>@order.EmployeeId</td>
